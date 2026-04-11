@@ -3,10 +3,10 @@ FROM eclipse-temurin:21-jdk-alpine AS build
 WORKDIR /app
 
 # Копируем gradle файлы
-COPY gradlew .
-COPY gradle gradle
-COPY build.gradle .
-COPY settings.gradle .
+COPY netflix-eureka/gradlew .
+COPY netflix-eureka/gradle gradle
+COPY netflix-eureka/build.gradle .
+COPY netflix-eureka/settings.gradle .
 
 # Копируем исходники common и самого сервиса
 COPY common common
